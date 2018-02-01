@@ -523,6 +523,70 @@ nav {
   color: #C1204A;
   font-size: 1.3rem; }
 
+#port-layout #percussion #port-photo {
+  background-image: url("../images/percussion.jpg"); }
+
+#port-layout #belly-dance #port-photo {
+  background-image: url("../images/belly_dance_open.jpg"); }
+
+#port-layout #flamenco #port-photo {
+  background-image: url("../images/flamenco_open.jpg"); }
+
+#port-layout #los-lunares #port-photo {
+  background-image: url("../images/los_lunares_logo_open.jpg"); }
+
+#port-layout #sakura-tango #port-photo {
+  background-image: url("../images/sakura_tango_open.jpg"); }
+
+#port-layout #uli-ruedas #port-photo {
+  background-image: url("../images/uli_ruedas_logo_open.jpg"); }
+
+#port-layout #section-b #port-photo {
+  margin-top: 0;
+  background-size: auto 100%;
+  background-position: center;
+  height: 300px; }
+  #port-layout #section-b #port-photo h2 {
+    padding-top: 9rem;
+    line-height: 3rem; }
+  #port-layout #section-b #port-photo h1 {
+    padding-left: 0; }
+  #port-layout #section-b #port-photo h1 > i {
+    margin-left: 1rem; }
+
+#port-layout #section-b .wrapper {
+  margin-top: 0; }
+
+#port-layout #video-sec {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 0 0; }
+  #port-layout #video-sec .respon-video {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    margin-bottom: 2rem; }
+    #port-layout #video-sec .respon-video iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+
+#port-layout #galery-sec li {
+  display: block;
+  height: 100%; }
+
+#port-layout #galery-sec img {
+  display: block;
+  width: 100%; }
+
+#port-layout main {
+  margin-bottom: 3rem; }
+
+@media (min-width: 1024px) {
+  #port-layout #section-b #port-photo h2 {
+    line-height: 3.5rem; } }
+
 /* IMPORT MODULES */
 header a {
   color: white;
@@ -740,7 +804,7 @@ footer svg {
     #luna-photo h2 {
       padding-top: 10rem; }
   #foot-photo {
-    background-size: auto 500px; }
+    background-size: auto 550px; }
   #me-photo {
     background-size: auto 300px; }
   .grid {
@@ -748,16 +812,59 @@ footer svg {
   header .grid {
     grid-template-columns: 1fr 2fr 2fr 1fr; }
   #section-a {
-    grid-template-columns: 1fr 2fr 2fr 1fr; }
-  .port-sec .grid {
-    grid-template-columns: 1fr 2fr 2fr 1fr; }
-  .port-sec li:nth-child(even) {
-    text-align: left; }
-  .port-sec li:nth-child(odd) {
-    text-align: right; }
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-gap: 2rem; }
+    #section-a #about-cont-1 h3, #section-a #about-cont-1 p,
+    #section-a #about-cont-2 h3,
+    #section-a #about-cont-2 p {
+      text-align: left; }
+  #section-b .port-sec .grid {
+    grid-template-columns: 2fr 2fr 2fr; }
+    #section-b .port-sec .grid li:first-child {
+      grid-column: 1/2;
+      text-align: right; }
+    #section-b .port-sec .grid li:nth-child(2) {
+      grid-column: 2/3;
+      text-align: center; }
+    #section-b .port-sec .grid li:nth-child(3) {
+      grid-column: 3/4;
+      text-align: left; }
+    #section-b .port-sec .grid li:nth-child(4) {
+      grid-column: 1/2;
+      text-align: right; }
+    #section-b .port-sec .grid li:nth-child(5) {
+      grid-column: 2/3;
+      text-align: center; }
+    #section-b .port-sec .grid li:nth-child(6) {
+      grid-column: 3/4;
+      text-align: left; }
   .wrapper {
     max-width: 1024px; }
   footer {
     grid-template-columns: 1fr 2fr 2fr 1fr; }
     footer .wrapper {
-      grid-column: 2/4; } }
+      grid-column: 2/4; }
+  #header-text {
+    width: 27rem;
+    padding-top: 17rem; }
+    #header-text h2 {
+      font-size: 2.5rem; }
+    #header-text h1,
+    #header-text h1 > i {
+      font-size: 4.5rem; }
+    #header-text h2:nth-child(3) {
+      line-height: 1.7rem; }
+  #about-text h2 {
+    font-size: 2.5rem; }
+  #about-text h1,
+  #about-text h1 > i {
+    font-size: 4.5rem; }
+  #section-a div:first-child h1 {
+    padding-left: 2.2rem; }
+  #section-b #port-photo h2 {
+    font-size: 2.5rem;
+    margin-left: 4rem; }
+  #section-b #port-photo h1,
+  #section-b #port-photo h1 > i {
+    font-size: 4.5rem;
+    margin-left: 3.5rem; } }
