@@ -583,9 +583,22 @@ nav {
 #port-layout main {
   margin-bottom: 3rem; }
 
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
   #port-layout #section-b #port-photo h2 {
-    line-height: 3.5rem; } }
+    line-height: 3.5rem; }
+  #port-layout #galery-sec img {
+    width: auto;
+    height: 234px; }
+  #port-layout #galery-sec .grid {
+    max-width: 700px;
+    grid-template-columns: 2fr 2fr; } }
+
+@media (min-width: 1024px) {
+  #port-layout #galery-sec img {
+    width: auto;
+    height: 342px; }
+  #port-layout #galery-sec .grid {
+    max-width: 1024px; } }
 
 /* IMPORT MODULES */
 header a {
