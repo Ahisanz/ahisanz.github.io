@@ -67,7 +67,6 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -106,7 +105,6 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */ }
 
@@ -282,7 +280,6 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -318,7 +315,6 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -398,7 +394,7 @@ template {
 
 /* IMPORT BASE */
 :root {
-  font-size: 18px; }
+  font-size: 15.5px; }
 
 li {
   list-style: none; }
@@ -430,7 +426,7 @@ h2 {
   font-size: 1.7rem; }
 
 h3 {
-  font-size: 1.3rem; }
+  font-size: 1.5rem; }
 
 p {
   color: #2D2D2D; }
@@ -443,9 +439,6 @@ a {
 
 .lighter-color {
   color: #BFB188; }
-
-nav {
-  display: none; }
 
 /* IMPORT LAYOUTS*/
 #me-photo {
@@ -513,8 +506,23 @@ nav {
   background-size: auto 20px;
   height: 20px; }
 
+#lkd-logo:hover {
+  background-image: url("../images/social-h-01.png"); }
+
+#inst-logo:hover {
+  background-image: url("../images/social-h-02.png"); }
+
+#gth-logo:hover {
+  background-image: url("../images/social-h-03.png"); }
+
 #logo-menu {
   background: black url("../images/logo-ana-min.png") no-repeat center;
+  background-size: auto 100px;
+  height: 100px;
+  background-color: transparent; }
+
+#logo-menu:hover {
+  background: black url("../images/logo-ana-min-hover-01.png") no-repeat center;
   background-size: auto 100px;
   height: 100px;
   background-color: transparent; }
@@ -547,7 +555,7 @@ nav {
   background-position: center;
   height: 300px; }
   #port-layout #section-b #port-photo h2 {
-    padding-top: 9rem;
+    padding-top: 0;
     line-height: 3rem; }
   #port-layout #section-b #port-photo h1 {
     padding-left: 0; }
@@ -588,17 +596,17 @@ nav {
     line-height: 3.5rem; }
   #port-layout #galery-sec img {
     width: auto;
-    height: 234px; }
+    height: 220px; }
   #port-layout #galery-sec .grid {
-    max-width: 700px;
+    max-width: 660px;
     grid-template-columns: 2fr 2fr; } }
 
 @media (min-width: 1024px) {
   #port-layout #galery-sec img {
     width: auto;
-    height: 342px; }
+    height: 320px; }
   #port-layout #galery-sec .grid {
-    max-width: 1024px; } }
+    max-width: 958px; } }
 
 /* IMPORT MODULES */
 header a {
@@ -606,34 +614,26 @@ header a {
   margin: 0 5%; }
 
 header nav {
-  position: fixed;
   margin: 0; }
-
-header ul {
-  width: 100vw; }
 
 header li:first-child {
   margin-left: 3%; }
   header li:first-child a {
-    padding: 1rem 1rem; }
+    padding: 1rem 2rem; }
+  header li:first-child a:first-child {
+    padding-top: 2rem; }
 
 header li {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  min-width: 20%;
-  -ms-flex-line-pack: center;
   align-content: center; }
   header li a {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
-    color: #C1204A;
-    font-size: 1rem;
-    padding: 0.5rem 0.8rem;
+    color: white;
+    font-size: 1.2rem;
     text-align: center; }
+  header li a:hover {
+    color: #C1204A; }
 
 header #logo-menu {
   text-indent: 1000%;
@@ -641,16 +641,13 @@ header #logo-menu {
   overflow: hidden; }
 
 #header-text {
-  padding-top: 19rem;
+  padding-top: 17rem;
   width: 20rem;
   padding-left: 0;
   margin-left: 0;
   margin-bottom: 3rem; }
   #header-text div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-item-align: start;
     align-self: flex-start; }
     #header-text div h1, #header-text div h2 {
       display: inline; }
@@ -700,7 +697,6 @@ header #logo-menu {
     display: block;
     color: #BFB188;
     opacity: 0.5;
-    -webkit-transition: opacity .55s ease-in-out;
     transition: opacity .55s ease-in-out; }
 
 .port-sec li:nth-child(even) {
@@ -758,16 +754,12 @@ footer svg {
   .grid {
     max-width: 1024px;
     display: grid; }
-  header nav {
-    max-width: 1024px;
-    display: none; }
   header .grid {
     grid-template-columns: .5rem 2fr 2fr .5rem; }
     header .grid div {
       grid-column: 2/3; }
     header .grid a {
       grid-column: 3/4;
-      -ms-flex-item-align: end;
       align-self: end;
       text-align: right; }
   #section-a {
@@ -779,7 +771,6 @@ footer svg {
     #section-a #about-text {
       grid-column: 2/3;
       width: 100%;
-      -ms-flex-item-align: center;
       align-self: center; }
       #section-a #about-text h2, #section-a #about-text h1 {
         margin: auto 0 auto 5%; }
@@ -801,6 +792,8 @@ footer svg {
       width: 100%; } }
 
 @media (min-width: 1024px) {
+  :root {
+    font-size: 16px; }
   #percu-photo,
   #sakura-photo,
   #flam-photo,
@@ -857,9 +850,15 @@ footer svg {
     grid-template-columns: 1fr 2fr 2fr 1fr; }
     footer .wrapper {
       grid-column: 2/4; }
+    footer #lkd-logo,
+    footer #inst-logo,
+    footer #gth-logo {
+      background-size: auto 30px;
+      height: 30px;
+      width: 30px; }
   #header-text {
     width: 27rem;
-    padding-top: 17rem; }
+    padding-top: 12.5rem; }
     #header-text h2 {
       font-size: 2.5rem; }
     #header-text h1,
@@ -868,10 +867,10 @@ footer svg {
     #header-text h2:nth-child(3) {
       line-height: 1.7rem; }
   #about-text h2 {
-    font-size: 2.5rem; }
+    font-size: 2.1rem; }
   #about-text h1,
   #about-text h1 > i {
-    font-size: 4.5rem; }
+    font-size: 3.4rem; }
   #section-a div:first-child h1 {
     padding-left: 2.2rem; }
   #section-b #port-photo h2 {
@@ -880,4 +879,6 @@ footer svg {
   #section-b #port-photo h1,
   #section-b #port-photo h1 > i {
     font-size: 4.5rem;
-    margin-left: 3.5rem; } }
+    margin-left: 3.5rem; }
+  header li a {
+    padding: 1rem 1rem; } }
