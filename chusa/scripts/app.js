@@ -65,4 +65,5 @@ $(document).ready(function () {
       $('#first-photo').attr('src',('./image/galery/chusa-' + i + '.jpg')).attr('data-key', i);
     }
   })
+  $("#video--cover source").get(0).play();
 })
