@@ -185,6 +185,9 @@ body {
   grid-template-columns: 1fr 1fr;
   padding: 1rem;
   grid-gap: .5rem; }
+  #video--list a {
+    color: #333;
+    text-decoration: none; }
   #video--list .item {
     width: 100%;
     cursor: pointer;
@@ -210,10 +213,10 @@ body {
     color: white;
     padding-left: 3rem; }
     #contact p:first-child {
-      padding-top: 3rem; }
+      padding-top: 4rem; }
   #contact a {
     text-decoration: none;
-    color: #666;
+    color: #999;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -224,7 +227,7 @@ body {
     #contact a:nth-child(6) {
       padding-bottom: 1rem; }
   #contact .section-back {
-    height: 200px; }
+    height: 250px; }
 
 .section-back {
   background: #111 url("../image/back.png") 170px/120% no-repeat;

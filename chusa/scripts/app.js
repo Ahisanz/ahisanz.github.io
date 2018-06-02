@@ -23,7 +23,7 @@ $(document).ready(function () {
   function mainVid(id) {
       $('#video--item1').html(`
         <div class="respon-video">
-				    <iframe src="https://www.youtube.com/embed/${id}?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				    <iframe src="https://www.youtube.com/embed/${id}?rel=0&amp;controls=1&amp;showinfo=0;autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 			`);
   };
@@ -36,16 +36,16 @@ $(document).ready(function () {
         var vid = item.snippet.resourceId.videoId;
 
         $('#video--list').append(`
-					<li class="item" data-key="${vid}">
+					<a class="item" data-key="${vid}" href='#video--item1'>
 						<img src="${thumb}" alt="" class="thumb">
             <p class="title-video">${title}</p>
-				  </li>
+				  </a>
 				`);
       });
   };
 
 	//youtube CLICK EVENT
-  $('main').on('click', 'li', function () {
+  $('main').on('click', 'a', function () {
     var id = $(this).attr('data-key');
       mainVid(id);
   });
@@ -65,5 +65,4 @@ $(document).ready(function () {
       $('#first-photo').attr('src',('./image/galery/chusa-' + i + '.jpg')).attr('data-key', i);
     }
   })
-  $("#video--cover source").get(0).play();
 })
