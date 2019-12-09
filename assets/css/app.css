@@ -882,8 +882,8 @@ footer a {
     font-size: 4.5rem;
     margin-left: 3.5rem; }
   header li a {
-    padding: 1rem 1rem; } }
-nt-size: 4.5rem; }
+    padding: 1rem 1rem; } 
+
     #header-text h2:nth-child(3) {
       line-height: 1.7rem; }
   #about-text h2 {
