@@ -872,3 +872,20 @@ p.principal {
         display: block; }
   .main-gallery .box-in {
     max-width: 900px; } }
+
+#ie-only {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 768px; }
+  #ie-only h1 {
+    font-size: 4rem;
+    margin: 2rem; }
+  #ie-only h2 {
+    margin: 1.5rem; }
+  #ie-only image {
+    margin-bottom: .5rem; }
+  #ie-only p {
+    margin-bottom: .5rem; }
+    #ie-only p.about {
+      margin: 0 auto 0.5rem auto;
+      max-width: 450px; }
