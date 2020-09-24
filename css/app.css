@@ -9,19 +9,31 @@
   list-style: none;
   cursor: crosshair; }
 
+:focus {
+  outline: 5px solid #C1204A;
+  outline-offset: 2px; }
+
 a {
-  cursor: pointer; }
+  cursor: pointer;
+  display: block;
+  padding-top: 5px; }
+  a:hover {
+    color: #BFB188; }
 
 body.modal-open {
   height: 100vh;
   overflow-y: hidden; }
 
-p.principal {
+p.principa, h3 {
   font-size: 2.3rem;
   font-family: "Playfair Display";
   font-weight: 700;
-  line-height: .8;
+  line-height: 1;
   margin-bottom: 2rem; }
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: normal; }
 
 .header {
   max-width: 1024px;
@@ -39,11 +51,10 @@ p.principal {
   .header-text {
     margin: 3rem auto 5rem auto;
     text-align: center; }
-    .header-text h1, .header-text h2 {
+    .header-text h1 {
       font-family: "Playfair Display";
       line-height: .9;
-      cursor: crosshair; }
-    .header-text h1 {
+      cursor: crosshair;
       font-size: 3rem; }
   .header-dev, .header-photo {
     height: 250px;
@@ -59,7 +70,7 @@ p.principal {
       height: 100%;
       width: auto;
       margin: 0 auto; }
-    .header-dev h3, .header-photo h3 {
+    .header-dev h2, .header-photo h2 {
       font-family: "Playfair Display";
       color: #BFB188;
       font-size: 3rem;
@@ -71,14 +82,14 @@ p.principal {
     .header-dev:hover, .header-photo:hover {
       transform: scale(1.1);
       background-image: url("https://picsum.photos/1024/250"); }
-      .header-dev:hover h3, .header-photo:hover h3 {
+      .header-dev:hover h2, .header-photo:hover h2 {
         color: #C1204A;
         transform: translateX(30px); }
   .header-dev {
     background-image: url("../images/percusion-11.jpg");
     background-position: center;
     margin-left: 1rem; }
-    .header-dev h3 {
+    .header-dev h2 {
       bottom: -1rem;
       left: -5rem;
       width: 426px; }
@@ -89,14 +100,14 @@ p.principal {
     margin-right: 1rem;
     background-image: url("../images/sakura-17.jpg");
     background-position: top; }
-    .header-photo h3 {
+    .header-photo h2 {
       color: #BFB188;
       right: -1.2rem;
       top: 1rem; }
     .header-photo:hover {
       background-image: url("../images/flamenco-19.jpg");
       background-position: center; }
-      .header-photo:hover h3 {
+      .header-photo:hover h2 {
         color: #C1204A;
         transform: translateX(-30px); }
 
@@ -119,15 +130,13 @@ p.principal {
       position: absolute;
       z-index: -1; }
     .all-intro .all-image .all-in {
-      height: 300px;
-      width: 200px;
-      background-image: url("../images/IMG_20200729_002055_2p.jpg");
-      background-position: center;
-      background-size: cover;
       transition: all .3s ease-in-out;
       transform: scale(1);
       margin: 0 auto;
       position: relative; }
+      .all-intro .all-image .all-in-img {
+        height: 280px;
+        width: auto; }
     .all-intro .all-image.fade-in {
       opacity: 1;
       transform: scale(1); }
@@ -138,6 +147,9 @@ p.principal {
     transition: all .4s ease-out;
     transform: translateX(-40px);
     opacity: 0; }
+    .all-intro .all-text h2 {
+      font-weight: normal;
+      margin-bottom: 1rem; }
     .all-intro .all-text p {
       padding-bottom: .5rem; }
       .all-intro .all-text p.title {
@@ -166,20 +178,23 @@ p.principal {
   overflow: hidden;
   opacity: 0;
   transition: .8s; }
+  .main-intro h2 {
+    text-align: center; }
   .main-intro .intro-out {
     padding: 1rem; }
   .main-intro .intro-img {
-    text-align: right;
+    height: 350px;
+    width: 220px;
+    margin: 0 auto;
+    overflow: hidden;
     position: relative; }
-    .main-intro .intro-img::after {
-      content: '';
-      height: 150px;
-      width: 220px;
-      top: 50%;
-      right: 10%;
-      transform: translate(0%, -50%);
+    .main-intro .intro-img img {
+      height: 350px;
+      width: auto;
       position: absolute;
-      z-index: -9; }
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
   .main-intro .intro-text {
     line-height: 1.2;
     padding-top: 1.5rem; }
@@ -253,15 +268,6 @@ p.principal {
     .main-dev.slide-on .intro-text {
       -webkit-animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
               animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
-  .main-dev .intro-img {
-    background-image: url("../images/sakura-1.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 350px;
-    width: 220px;
-    margin: 0 0 0 auto; }
-    .main-dev .intro-img::after {
-      border: 8px solid #C1204A; }
 
 .main-photo {
   opacity: 0;
@@ -273,18 +279,6 @@ p.principal {
     .main-photo.slide-on .intro-text {
       -webkit-animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
               animation: text-focus-in 0.8s cubic-bezier(0.55, 0.085, 0.68, 0.53) both; }
-  .main-photo .intro-img {
-    text-align: left;
-    background-image: url("../images/sakura-14.jpg");
-    background-position: -113px center;
-    background-size: cover;
-    height: 350px;
-    width: 220px;
-    margin: 0 auto 0 0; }
-    .main-photo .intro-img::after {
-      left: 10%;
-      right: auto;
-      border: 8px solid #BFB188; }
   .main-photo .intro-text {
     text-align: right; }
 
@@ -479,7 +473,12 @@ p.principal {
   transform: translateY(-30px);
   transition: .5s;
   opacity: 0;
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem;
+  padding-top: 2rem; }
+  .github h2, .github h3 {
+    text-align: center; }
+  .github h2 {
+    margin-bottom: 1rem; }
   .github.fade-in {
     transform: translateY(0);
     opacity: 1; }
@@ -504,7 +503,7 @@ p.principal {
 .contact .container {
   padding: 1rem 1rem 6rem 1rem; }
 
-.header-text h2 {
+.header-text p {
   -webkit-animation: show-up-left 1s ease-in both;
           animation: show-up-left 1s ease-in both; }
 
@@ -515,14 +514,14 @@ p.principal {
 .header-dev {
   -webkit-animation: show-up-right 1s ease-in-out both 1.5s;
           animation: show-up-right 1s ease-in-out both 1.5s; }
-  .header-dev a h3 {
+  .header-dev a h2 {
     -webkit-animation: show-up-left 1s ease-in-out both 1.5s;
             animation: show-up-left 1s ease-in-out both 1.5s; }
 
 .header-photo {
   -webkit-animation: show-up-left 1s ease-in-out both 2s;
           animation: show-up-left 1s ease-in-out both 2s; }
-  .header-photo a h3 {
+  .header-photo a h2 {
     -webkit-animation: show-up-right 1s ease-in-out both 2s;
             animation: show-up-right 1s ease-in-out both 2s; }
 
@@ -721,7 +720,7 @@ p.principal {
 @media screen and (min-width: 550px) {
   .all-intro .all-image::after {
     width: 45%;
-    top: 82%;
+    top: 77%;
     left: 50%;
     transform: translate(-50%, -50%); }
   .all-intro .all-text {
@@ -788,8 +787,10 @@ p.principal {
     grid-auto-flow: column;
     -ms-grid-columns: 1fr 1fr 1fr;
     padding: 5rem 0; }
-  .all-image {
-    -ms-grid-column: 2; }
+    .all-intro .all-image {
+      -ms-grid-column: 2; }
+      .all-intro .all-image::after {
+        top: 67%; }
   .all-text {
     -ms-grid-column: 3; }
     .all-text#animate-text {
@@ -832,7 +833,7 @@ p.principal {
   .header, .all-intro, .main-intro, .main-gallery, .contact {
     max-width: 1024px;
     margin: 0 auto; }
-  .header-dev h3 {
+  .header-dev h2 {
     color: #fff;
     bottom: 3rem;
     left: -3rem;
@@ -840,10 +841,10 @@ p.principal {
     transform: translateX(-50px);
     -webkit-animation: none !important;
             animation: none !important; }
-  .header-dev:hover h3 {
+  .header-dev:hover h2 {
     color: #fff;
     opacity: 1; }
-  .header-photo h3 {
+  .header-photo h2 {
     color: #fff;
     right: 2rem;
     top: 2rem;
@@ -851,7 +852,7 @@ p.principal {
     transform: translateX(50px);
     -webkit-animation: none !important;
             animation: none !important; }
-  .header-photo:hover h3 {
+  .header-photo:hover h2 {
     color: #fff;
     opacity: 1; }
   .all-intro .all-image {
