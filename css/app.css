@@ -503,10 +503,6 @@ h2 {
 .contact .container {
   padding: 1rem 1rem 6rem 1rem; }
 
-.header-text p {
-  -webkit-animation: show-up-left 1s ease-in both;
-          animation: show-up-left 1s ease-in both; }
-
 .header-text h1 {
   -webkit-animation: show-up-right 1s ease-out both .8s;
           animation: show-up-right 1s ease-out both .8s; }
