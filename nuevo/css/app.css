@@ -58,6 +58,10 @@ a {
   outline: 5px solid #F48167;
   outline-offset: 2px; }
 
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 8px #F48167; }
+
 .section-base {
   padding-bottom: 2rem; }
 
@@ -108,7 +112,7 @@ p {
 
 .circle-image {
   border-radius: 50%;
-  width: 80%;
+  width: 90%;
   height: auto; }
 
 .header {
@@ -137,36 +141,10 @@ p {
     left: 5%; }
   .header__title {
     font-family: "Domaine-Sans";
-    font-size: 3rem; }
+    font-size: 3rem;
+    width: 200px; }
   .header__subtitle {
-    font-size: 1.2rem; }
-  .header__circle {
-    right: 10%;
-    left: auto;
-    bottom: -30%;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    transition: all .3s;
-    cursor: pointer; }
-    .header__circle .header--videomaker {
-      visibility: hidden; }
-    .header__circle:hover {
-      background-color: #F9AF77; }
-      .header__circle:hover .header--frontend {
-        visibility: hidden; }
-      .header__circle:hover .header--videomaker {
-        visibility: visible; }
-  .header__description {
-    color: #000;
-    font-family: "Noah-Regular";
-    font-size: 1rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    font-size: 1.5rem; }
 
 .about-image {
   max-width: 100%;
@@ -192,6 +170,8 @@ p {
 .about-text {
   max-width: 90%;
   margin: 0 auto; }
+  .about-text__second {
+    transition: all .3s ease-out; }
 
 .experience {
   background-color: #ededed; }
@@ -199,6 +179,8 @@ p {
     max-width: 90%;
     margin: 0 auto 2rem auto;
     padding-top: 2rem; }
+    .experience-text__second {
+      display: none; }
   .experience-image {
     position: relative;
     margin: 0 auto;
@@ -233,10 +215,47 @@ p {
 
 .github {
   max-width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-top: 2rem; }
   .github-profile__hirable.hirable {
     color: #43B871; }
 
 .footer {
-  max-width: 90%;
-  margin: 0 auto; }
+  background-color: #ededed;
+  padding-top: 2rem; }
+  .footer-text {
+    margin: 0 auto;
+    max-width: 90%;
+    display: block; }
+
+.viewer-circle {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  width: 80px;
+  height: 80px;
+  background-color: #99789E;
+  transition: all .3s;
+  cursor: pointer;
+  position: fixed;
+  right: 10%;
+  bottom: 15%;
+  z-index: 999; }
+  .viewer-circle__text--videomaker {
+    visibility: hidden; }
+  .viewer-circle:hover {
+    background-color: #F9AF77; }
+    .viewer-circle:hover .viewer-circle__text--frontend {
+      visibility: hidden; }
+    .viewer-circle:hover .viewer-circle__text--videomaker {
+      visibility: visible; }
+  .viewer-circle__text {
+    color: #000;
+    font-family: "Noah-Regular";
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
