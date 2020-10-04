@@ -167,7 +167,8 @@ p {
     width: 100px;
     position: absolute;
     top: 0%;
-    right: 10%; }
+    right: 10%;
+    z-index: 999; }
   .header__image {
     position: relative;
     margin: 0 auto;
@@ -279,6 +280,11 @@ p {
   .about-text {
     max-width: 90%;
     margin: 0 auto; }
+
+.experience .main__title {
+  margin: 0 auto;
+  max-width: 90%;
+  display: block; }
 
 .experience-text {
   max-width: 90%;
